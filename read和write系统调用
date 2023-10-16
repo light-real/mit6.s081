@@ -1,0 +1,12 @@
+#include<unistd.h>
+#include<stdlib.h>
+#include<stdio.h>
+using namespace std;
+
+int main(){
+	char buf[64];
+	int n = read(0,buf,sizeof(buf));  //  文件描述符0连接到console输入 
+	write(1,buf,n);  //文件描述符1连接到console输出 
+	printf("n is : %d\n",n);
+	return 0;
+} 
